@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const CharacterDetails = ({ name, img }) => (
   <>
-    <img src={img} alt={name} />
+    <img style={{ width: '200px' }} src={img} alt="picture of char" />
     <p>{name}</p>
   </>
 );
