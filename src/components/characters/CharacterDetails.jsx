@@ -1,18 +1,17 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 // THIS IS WHAT DISPLAYS TO PAGE
 
-const CharacterDetails = ({ name, image }) => (
+const CharacterDetails = ({ name, img }) => (
   <>
-    <img src={image} alt={name} />
+    <img src={img} alt={name} />
     <p>{name}</p>
-    <p>{image}</p>
   </>
 );
-// CharacterDetails.propTypes = {
-//   name: PropTypes.string.isRequired,
-//   img: PropTypes.string.isRequired,
-// };
+CharacterDetails.propTypes = {
+  name: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+};
 
 export default CharacterDetails;

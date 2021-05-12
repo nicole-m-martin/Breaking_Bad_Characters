@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import CharacterDetails from '../characters/CharacterDetails';
 
 const CharacterList = ({ characters }) => (
@@ -10,20 +10,20 @@ const CharacterList = ({ characters }) => (
         <CharacterDetails
           id={character.char_id}
           name={character.name}
-          image={character.img}
+          img={character.img}
         />
       </li>
     ))}
   </ul>
 );
 
-// CharacterList.propTypes = {
-//   characters: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.number.isRequired,
-//       name: PropTypes.string.isRequired,
-//       image: PropTypes.string.isRequired,
-//     })
-//   ).isRequired,
-// };
+CharacterList.propTypes = {
+  characters: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      img: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
 export default CharacterList;

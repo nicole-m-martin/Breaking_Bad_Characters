@@ -16,7 +16,7 @@ export default class BreakingBadContainer extends Component {
   }
 
   render() {
-    const { loading } = this.state;
+    const { loading, characters } = this.state;
 
     if (loading) return <h1>Loading....</h1>;
 
