@@ -1,5 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
+import CharacterList from '../characters/CharacterList';
+import CharacterDetails from '../characters/CharacterDetails';
+import HomePage from '';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-export default function App() {
-  return <h1>Hello World</h1>;
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <Router>
+          <Switch>
+            <Route path="/" exact component={CharacterList} />
+            <Route path="/:id" exact component={CharacterDetails} />
+          </Switch>
+        </Router>
+      </div>
+    );
+  }
 }
