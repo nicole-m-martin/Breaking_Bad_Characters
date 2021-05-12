@@ -7,5 +7,8 @@ describe('Breaking Bad Container', () => {
     render(<BreakingBadContainer />);
 
     screen.getByText('Loading....');
+
+    const ul = await screen.findByRole('list', { name: 'characters' });
+    expect(ul).not.toBeEmptyDOMElement();
   });
 });
